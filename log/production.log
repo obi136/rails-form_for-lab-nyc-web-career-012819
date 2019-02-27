@@ -1,0 +1,29 @@
+D, [2019-02-26T17:54:36.325454 #12483] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+D, [2019-02-26T17:54:36.325916 #12483] DEBUG -- :   [1m[35m (0.1ms)[0m  select sqlite_version(*)
+D, [2019-02-26T17:54:36.328119 #12483] DEBUG -- :   [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+D, [2019-02-26T17:54:36.329398 #12483] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2019-02-26T17:54:36.340838 #12483]  INFO -- : Migrating to CreateStudents (1)
+D, [2019-02-26T17:54:36.341507 #12483] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2019-02-26T17:54:36.343412 #12483] DEBUG -- :   [1m[35m (0.5ms)[0m  CREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2019-02-26T17:54:36.350926 #12483] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2019-02-26T17:54:36.352149 #12483] DEBUG -- :   [1m[35m (1.0ms)[0m  commit transaction
+I, [2019-02-26T17:54:36.352245 #12483]  INFO -- : Migrating to CreateSchoolClasses (2)
+D, [2019-02-26T17:54:36.352861 #12483] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2019-02-26T17:54:36.353832 #12483] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "schoolclass" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer) 
+D, [2019-02-26T17:54:36.354947 #12483] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "2"]]
+D, [2019-02-26T17:54:36.355720 #12483] DEBUG -- :   [1m[35m (0.6ms)[0m  commit transaction
+D, [2019-02-27T10:25:31.929836 #16361] DEBUG -- :   [1m[36m (4.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+D, [2019-02-27T10:25:31.933191 #16361] DEBUG -- :   [1m[35m (0.3ms)[0m  select sqlite_version(*)
+D, [2019-02-27T10:25:31.936567 #16361] DEBUG -- :   [1m[36m (2.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+D, [2019-02-27T10:25:31.938441 #16361] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2019-02-27T10:25:31.950822 #16361]  INFO -- : Migrating to CreateStudents (1)
+D, [2019-02-27T10:25:31.953199 #16361] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+D, [2019-02-27T10:25:31.956237 #16361] DEBUG -- :   [1m[35m (0.6ms)[0m  CREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2019-02-27T10:25:31.971127 #16361] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2019-02-27T10:25:31.986653 #16361] DEBUG -- :   [1m[35m (14.0ms)[0m  commit transaction
+I, [2019-02-27T10:25:31.987137 #16361]  INFO -- : Migrating to CreateSchoolClasses (2)
+D, [2019-02-27T10:25:31.990678 #16361] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2019-02-27T10:25:31.991736 #16361] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer) 
+D, [2019-02-27T10:25:31.993094 #16361] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "2"]]
+D, [2019-02-27T10:25:32.000134 #16361] DEBUG -- :   [1m[35m (6.3ms)[0m  commit transaction
+D, [2019-02-27T14:11:57.515209 #2586] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
